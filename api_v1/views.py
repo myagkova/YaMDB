@@ -13,7 +13,7 @@ from rest_framework.response import Response
 from rest_framework_simplejwt.views import TokenObtainPairView
 
 from .filters import TitleFilter
-from .models import Category, Genre, Title, User
+from .models import Category, Genre, Review, Title, User
 from .permissions import (IsAdmin, IsAdminOrReadOnly,
                           IsAuthorAdminModeratorOrReadOnly)
 from .serializers import (CategorySerializer, CommentSerializer,
@@ -99,9 +99,8 @@ class TitleViewSet(viewsets.ModelViewSet):
     pagination_class = PageNumberPagination
 
     def get_queryset(self):
-        rating = Title.objects.all().annotate(
+        return Title.objects.all().annotate(
             rating=Avg('reviews__score')).order_by('rating')
-        return rating
 
     class Meta:
         ordering = ['reviews__pub_date']
