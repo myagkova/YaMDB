@@ -99,9 +99,8 @@ class TitleViewSet(viewsets.ModelViewSet):
     pagination_class = PageNumberPagination
 
     def get_queryset(self):
-        rating = Title.objects.all().annotate(
+        return Title.objects.all().annotate(
             rating=Avg('reviews__score')).order_by('rating')
-        return rating
 
     class Meta:
         ordering = ['reviews__pub_date']
