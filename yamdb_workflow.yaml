@@ -64,6 +64,7 @@ jobs:
             sudo docker pull ${{ secrets.DOCKER_USERNAME }}/yamdb
             sudo docker-compose stop
             sudo docker-compose rm web
+            docker-compose exec web python manage.py collectstatic --no-input
             touch .env
             echo DB_ENGINE=${{ secrets.DB_ENGINE }} >> .env
             echo DB_NAME=${{ secrets.DB_NAME }} >> .env
