@@ -27,7 +27,7 @@ services:
     ports:
       - "80:80"
     environment:
-      - NGINX_HOST=130.193.52.118
+      - NGINX_HOST=gelyamolodets.hopto.org
     volumes:
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
       - static_value:/var/html/static/
