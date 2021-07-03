@@ -13,12 +13,10 @@ services:
     env_file:
       - ./.env
   web:
-    build: .
     image: gelyamolodets/yamdb
     restart: always
     volumes:
       - static_value:/code/static/
-
       - media_value:/code/media/ 
     depends_on:
       - db
@@ -28,6 +26,8 @@ services:
     image: nginx:1.19.3
     ports:
       - "80:80"
+    environment:
+      - NGINX_HOST=gelyamolodets.hopto.org
     volumes:
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
       - static_value:/var/html/static/
