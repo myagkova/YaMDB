@@ -3,11 +3,11 @@ from datetime import timedelta
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-SECRET_KEY = ${SECRET_KEY}
+SECRET_KEY = '${SECRET_KEY}'
 
 DEBUG = False
 
-ALLOWED_HOSTS = [${NGINX_PORT}]
+ALLOWED_HOSTS = ['${NGINX_PORT}']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
