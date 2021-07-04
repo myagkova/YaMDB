@@ -1,7 +1,7 @@
 server {
     server_name ${NGINX_HOST};
 
-    listen ${NGINX_PORT};
+    listen 80;
 
     server_tokens off;
 
