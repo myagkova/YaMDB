@@ -7,7 +7,7 @@ SECRET_KEY = '${SECRET_KEY}'
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['${NGINX_HOST}']
+ALLOWED_HOSTS = ['130.193.52.118', ]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
