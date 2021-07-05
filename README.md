@@ -1,5 +1,5 @@
 # YaMDb
-gelyamolodets.hopto.org
+Адрес сервера: http://130.193.52.118/
 
 (https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
 
