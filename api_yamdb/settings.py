@@ -7,7 +7,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', "other")
 
 DEBUG = False
 
-ALLOWED_HOSTS = os.environ.get('NGINX_HOST').split(' ')
+ALLOWED_HOSTS = ['10.129.0.30']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
