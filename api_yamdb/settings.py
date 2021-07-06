@@ -7,7 +7,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'fake key for unit test')
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '130.193.52.118', 'web', ]
+ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
