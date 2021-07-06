@@ -5,9 +5,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = os.getenv('SECRET_KEY', 'fake key for unit test')
 
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '130.193.52.118', 'web', ]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -91,6 +91,8 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'redoc'), ]
 
 STATIC_URL = '/static/'
 
